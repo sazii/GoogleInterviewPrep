@@ -8,7 +8,7 @@ Stack.prototype.push = function(data){
 };
 
 Stack.prototype.pop = function(){
-  if (!this.size()) throw Error('Stack is Empty!');
+  if (this.size() === -1) throw Error('Stack is Empty!');
   return this.data[this.top--];
 };
 
@@ -17,7 +17,12 @@ Stack.prototype.size = function(){
 };
 
 Stack.prototype.peek = function(){
+  if (this.isEmpty()) throw Error('Stack is Empty!');
   return this.data[this.top];
+};
+
+Stack.prototype.isEmpty = function(){
+  return this.size() === -1;
 };
 
 module.exports = Stack;
