@@ -42,6 +42,7 @@ stack.pop();
 console.log(stack.min());
 
 // a bit better than this using additional stack tracking the min value
+// write more object oriented;;;;
 
  class StackMin2 extends Stack {
   constructor()
