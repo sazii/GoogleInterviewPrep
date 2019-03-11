@@ -42,6 +42,10 @@ TrieNode.prototype.terminates = function(){
   return this.terminates;
 };
 
+TrieNode.prototype.setTerminates = function(bool){
+  this.terminates = bool;
+};
+
 //Add word to the node, and recursively create the child nodes.
 TrieNode.prototype.addWord = function(word){
   if (!word) return;
@@ -55,3 +59,6 @@ TrieNode.prototype.addWord = function(word){
   else childNode.setTerminates(true);
 };
 
+let text = 'Sazi geldi saz';
+let trie = new Trie(text);
+console.log(trie.contains('gl'));

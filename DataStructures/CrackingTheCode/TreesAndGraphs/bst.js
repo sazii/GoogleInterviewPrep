@@ -88,3 +88,5 @@ BinarySearchTree.prototype.breadthFirstForEach = function(func){
 BinarySearchTree.prototype.size = function(){
  return this.length;
 };
+
+module.exports = BinarySearchTree;
