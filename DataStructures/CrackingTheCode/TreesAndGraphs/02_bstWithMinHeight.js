@@ -19,4 +19,6 @@ function bstWithMinHeight2(arr, start, end){
 }
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8];
-console.log(bstWithMinHeight(arr));
+let balancedTree = bstWithMinHeight(arr);
+
+module.exports = balancedTree;
