@@ -21,6 +21,7 @@ function findCommonAncestor(root, node1, node2){
     }
 }
 
+//we can compare by objects; because they refer the same memory address.
 function isDescendent(grand, candiDesc){
   if (grand === candiDesc) return true;
   if (grand === null) return false;
