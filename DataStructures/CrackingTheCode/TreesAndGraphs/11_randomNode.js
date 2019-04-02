@@ -44,12 +44,24 @@ BinarySearchTree.prototype.delete = function(val){
   else this[direction].delete(val);
 };
 
+BinarySearchTree.prototype.size = function(){
+  return this.length;
+};
+
 function findMinVal(node){
   while (node.left) {
     node = node.left;
   }
   return node.rootValue;
 }
+
+BinarySearchTree.prototype.getRandomNode = function(){
+  let leftSize = !this.left ? 0 : this.left.size();
+  let randIndex = Math.floor(Math.random() * this.size());
+  if (randIndex < leftSize) this.left.getRandomNode();
+  else if (randIndex === leftSize) return this;
+  else this.right.getRandomNode();
+};
 
 
 let btree = new BinarySearchTree(3);
